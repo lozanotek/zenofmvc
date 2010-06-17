@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace WebFormsCurrent {
+﻿namespace WebFormsCurrent {
+    using System;
     using System.Collections.Generic;
     using DAL;
     using Model;

@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
-    using Models;
     using Services;
 
     public class PersonController : Controller
@@ -33,7 +32,7 @@
             return View("CreateNew");
         }
 
-        public ActionResult CreateNew([ModelBinder(typeof(PersonBinder))] PersonData personData)
+        public ActionResult CreateNew(PersonData personData)
         {
             personService.CreateNewPerson(personData);
             return RedirectToAction("Index");
@@ -47,7 +46,7 @@
             return View();
         }
 
-        public ActionResult Update([ModelBinder(typeof(PersonBinder))] PersonData person)
+        public ActionResult Update(PersonData person)
         {
             personService.Save(person);
             return RedirectToAction("index");

@@ -1,18 +1,28 @@
-﻿<%@ page language="C#" autoeventwireup="true" codebehind="Default.aspx.cs" inherits="WebFormsCurrent._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebFormsCurrent._Default"
+    MasterPageFile="~/Site.Master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Web Forms - Current Methods</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <!-- This technically should be the "view" -->
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" ID="defaultContent" runat="server">
     <div>
         <h3>
             Person List</h3>
-        <asp:gridview runat="server" id="personGridView" />
+        <hr />
+        <div>
+            <a href="people/createnew.aspx">Create New</a>
+        </div>
+        <asp:GridView ID="personGridView" runat="server" AutoGenerateColumns="False" CellPadding="4"
+            ForeColor="#333333" GridLines="None">
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <Columns>
+                <asp:BoundField DataField="FirstName" HeaderText="First Name" ReadOnly="True" />
+                <asp:BoundField DataField="LastName" HeaderText="LastName" ReadOnly="True" />
+                <asp:BoundField DataField="BirthDate" HeaderText="BirthDate" ReadOnly="True" DataFormatString="{0:d}" />
+                <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/people/edit.aspx?personId={0}"
+                    Text="Edit" />
+                <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/people/delete.aspx?personId={0}"
+                    Text="Delete" />
+            </Columns>
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+        </asp:GridView>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
