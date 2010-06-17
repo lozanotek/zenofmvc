@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebFormsCurrent.AllSite" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WebForms Demo</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" runat="server" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>ASP.NET WebForms Demo Application</h1>
+            </div>
+        </div>
+        <div id="main">
+            <div id="content">
+                <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                </form>
+            </div>
+            <div id="footer">
+                <p>ASP.NET WebForms Demo &copy; Copyright 2008</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
