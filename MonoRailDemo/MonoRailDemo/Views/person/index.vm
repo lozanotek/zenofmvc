@@ -1,0 +1,29 @@
+﻿<div>
+    <h3>Person List</h3>
+    <hr />
+    <div id ="menu">
+        <ul>
+            <li><a href="new.rails">Create new Person</a></li>
+            <li><a href="causeerror.rails">Show "rescue" functionality</a></li>
+        </ul>
+    </div>
+
+    <table cellspacing="0" cellpadding="4" border="0" style="color:#333333;border-collapse:collapse;">
+        <tr style="color:White;background-color:#5D7B9D;font-weight:bold;">
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Birthdate</th>
+            <th></th>
+            <th></th>
+        </tr>
+        #foreach($person in $personList)
+        <tr>
+            <td>$person.FirstName</td>
+            <td>$person.LastName</td>
+            <td>$person.Birthdate</td>
+            <td><a href="edit/${person.Id}">Edit</a></td>
+            <td><a href="delete/${person.Id}">Delete</a></td>
+        </tr>
+        #end
+    </table>
+</div>

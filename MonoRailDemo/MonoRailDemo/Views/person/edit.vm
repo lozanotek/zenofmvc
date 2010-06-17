@@ -1,0 +1,33 @@
+<h3>Edit Person Info</h3>
+<hr />
+
+#if($Flash.error)
+<p style="color: red; font-weight: bold;">
+    $Flash.error
+</p>
+#end
+
+<div id ="menu">
+    <ul>
+        <li><a href="/person/index.rails">&lt;&lt; Return to list</a></li>
+    </ul>
+</div>
+
+<form action="/person/update.rails" method="post">
+
+    $FormHelper.HiddenField("person.id")
+    <p>
+        <label>First Name: $FormHelper.TextField("person.firstname")</label>
+    </p>
+    <p>
+        <label>Last Name: $FormHelper.TextField("person.lastname")</label>
+    </p>
+
+    <p>
+        <label>Date of Birth: $FormHelper.TextFieldFormat("person.birthdate", "MM/dd/yyyy")</label>
+    </p>
+    <p>
+        <input type="submit" value="Update" />
+    </p>
+
+</form>
