@@ -73,7 +73,7 @@
             string[] firstNames = { "Jim", "John", "Steve" };
             string[] lastNames = { "Smith", "Jones", "Miller" };
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 24; i++)
             {
                 int mod = i % 3;
                 var p = new Person

@@ -1,0 +1,35 @@
+<%@ master language="C#" autoeventwireup="true" inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>MVC Demo</title>
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../content/css/redmond/jquery-ui-1.8.2.custom.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../content/css/ui.jqgrid.css" />
+    
+    <script type="text/javascript" src="../../scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="../../scripts/i18n/grid.locale-en.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.jqGrid.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>
+                    ASP.NET MVC Demo Application</h1>
+            </div>
+        </div>
+        <div id="main">
+            <div id="content">
+                <asp:contentplaceholder id="MainContent" runat="server" />
+            </div>
+            <div id="footer">
+                <p>
+                    ASP.NET MVC Demo &copy; Copyright 2008</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
